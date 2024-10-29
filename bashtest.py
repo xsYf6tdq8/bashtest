@@ -84,7 +84,7 @@ def main():
     global CHECK_EXITCODE
 
     args = parseargs()
-    optionflags = doctest.NORMALIZE_WHITESPACE
+    optionflags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
 
     if not args.files:
         args.files = glob.glob('*.bashtest')
